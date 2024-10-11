@@ -45,7 +45,7 @@ export const Weather = () => {
     } catch (err) {
       if (err.response && err.response.status === 404) {
         setError("Oops! Location not found");
-        setNotFoundImage("/public/image/404.png");
+        setNotFoundImage("/image/404.png");
       } else {
         setError("An error occurred while fetching data");
       }
@@ -57,17 +57,17 @@ export const Weather = () => {
   const getWeatherImage = (main) => {
     switch (main) {
       case "Clear":
-        return "../../public/image/clear.png";
+        return "/image/clear.png";
       case "Rain":
-        return "../../public/image/rain.png";
+        return "/image/rain.png";
       case "Snow":
-        return "../../public/image/snow.png";
+        return "/image/snow.png";
       case "Clouds":
-        return "../../public/image/cloud.png";
+        return "/image/cloud.png";
       case "Mist":
-        return "../../public/image/mist.png";
+        return "/image/mist.png";
       default:
-        return "../../public/image/cloud.png";
+        return "/image/cloud.png";
     }
   };
 
